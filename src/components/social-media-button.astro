@@ -1,0 +1,18 @@
+---
+export interface Props {
+	id: 'github' | 'linkedin'
+	label: 'GitHub' | 'LinkedIn'
+	url: string
+}
+
+const { id, url, label } = Astro.props
+---
+
+<a href={url} target="_blank">
+	<button
+		class="flex h-20 w-64 items-center justify-center gap-4 rounded-3xl border-[3px] border-b-8 border-r-4 border-black bg-white font-semibold hover:border-b-[10px] hover:border-r-[6px]"
+	>
+		<p class="text-2xl">{label}</p>
+		<img src={`${id}.svg`} alt={`${id} logo`} />
+	</button>
+</a>
