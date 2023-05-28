@@ -1,0 +1,33 @@
+---
+// document.addEventListener('', () => {
+// 	const btn = document.querySelector('.smb')
+// 	const bg = document.querySelector('.bg')
+// 	const bg2 = document.querySelector('.bg2')
+
+// 	btn.addEventListener('mouseenter', () => {
+// 		bg.classList.add('top-[-60px]')
+// 		bg2.classList.add('top-[-120px]')
+// 	})
+
+// 	btn.addEventListener('mouseleave', () => {
+// 		bg.classList.remove('top-[-60px]')
+// 		bg2.classList.remove('top-[-120px]')
+// 	})
+// })
+---
+
+<div>
+	<button
+		class="smb relative z-[1] flex h-20 w-64 items-center justify-center gap-4 rounded-3xl border-[3px] border-b-8 border-r-4 border-black bg-white font-semibold"
+	>
+		<p class="text-2xl">GitHub</p>
+		<img src="github.svg" alt="logo" />
+	</button>
+
+	<div
+		class="bg relative top-[-80px] z-[-1] h-20 w-64 rounded-3xl bg-pink-400 hover:top-[-60px]"
+	>
+	</div>
+	<div class="bg2 relative top-[-160px] z-[-2] h-20 w-64 rounded-3xl bg-black">
+	</div>
+</div>

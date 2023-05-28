@@ -1,6 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import SocialMediaButton from '../components/social-media-button.astro'
+import SMBExperiment from '../components/smb-experiment.astro'
+import Laracast from '../components/laracast.astro'
+import { SMB } from '../components/smb'
 ---
 
 <Layout title="Daniel Marques - Software Engineer">
@@ -16,7 +19,7 @@ import SocialMediaButton from '../components/social-media-button.astro'
 					>
 				</h2>
 
-				<p class="text-justify text-lg">
+				<p class="text-justify text-lg leading-8 text-gray-600">
 					Hey there! I'm Daniel, a passionate Full-stack Software Engineer with
 					a keen eye for detail and a drive to deliver top-notch software
 					solutions. Whether it's building from scratch or refining existing
@@ -26,22 +29,17 @@ import SocialMediaButton from '../components/social-media-button.astro'
 				</p>
 
 				<div class="mx-auto flex flex-col gap-8 md:flex-row">
-					<SocialMediaButton
-						id="github"
-						url="https://github.com/danielmarques12"
-						label="GitHub"
-					/>
-					<SocialMediaButton
-						id="linkedin"
-						url="https://www.linkedin.com/in/danielmarquesdev"
-						label="LinkedIn"
-					/>
+					<!-- <SMBExperiment /> -->
+
+					<!-- <SMB client:load /> -->
+
+					<Laracast />
 				</div>
 			</div>
 
 			<img
 				class="mx-auto h-[360px] w-[270px] rounded-2xl border-[6px] border-b-[14px] border-r-[10px] border-black"
-				src="me.jpg"
+				src="me.png"
 				alt="picture of me"
 			/>
 		</div>
