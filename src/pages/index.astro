@@ -1,9 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import SocialMediaButton from '../components/social-media-button.astro'
-import SMBExperiment from '../components/smb-experiment.astro'
-import Laracast from '../components/laracast.astro'
-import { SMB } from '../components/smb'
 ---
 
 <Layout title="Daniel Marques - Software Engineer">
@@ -28,12 +25,18 @@ import { SMB } from '../components/smb'
 					together!
 				</p>
 
-				<div class="mx-auto flex flex-col gap-8 md:flex-row">
-					<SMBExperiment />
+				<div class="mx-auto mt-8 flex flex-col gap-12 md:flex-row">
+					<SocialMediaButton
+						id="github"
+						label="GitHub"
+						url="https://github.com/danielmarques12"
+					/>
 
-					<!-- <SMB client:load /> -->
-
-					<!-- <Laracast /> -->
+					<SocialMediaButton
+						id="linkedin"
+						label="LinkedIn"
+						url="https://www.linkedin.com/in/danielmarquesdev"
+					/>
 				</div>
 			</div>
 
