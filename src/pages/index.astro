@@ -2,15 +2,18 @@
 import Layout from '../layouts/Layout.astro'
 import SocialMediaButton from '../components/social-media-button.astro'
 import SlidingCards from '../components/sliding-cards.astro'
+import { CV } from '../components/cv'
 ---
 
 <Layout title="Daniel Marques - Software Engineer">
 	<main
-		class="mx-auto flex flex-col gap-32 py-24 text-center md:max-w-6xl md:text-left"
+		class="mx-auto flex flex-col gap-24 py-24 text-center md:max-w-6xl md:text-left"
 	>
 		<div class="flex flex-col-reverse gap-12 md:flex-row md:gap-20">
 			<div class="flex flex-col gap-6">
-				<h1 class="text-8xl font-semibold leading-[112px]">DANIEL MARQUES</h1>
+				<h1 class="text-8xl font-semibold leading-[112px] md:max-w-5xl">
+					DANIEL MARQUES
+				</h1>
 				<h2 class="text-2xl font-medium">
 					Software Engineer at <a
 						class="ml-2 underline hover:text-pink-500"
@@ -19,14 +22,7 @@ import SlidingCards from '../components/sliding-cards.astro'
 					>
 				</h2>
 
-				<!-- <p class="text-justify text-lg leading-8 text-gray-600">
-					Hey there! I'm Daniel, a passionate Full-stack Software Engineer with
-					a keen eye for detail and a drive to deliver top-notch software
-					solutions. Whether it's building from scratch or refining existing
-					systems, I'm dedicated to ensuring high quality and user-friendly
-					experiences every step of the way. Let's create something amazing
-					together!
-				</p> -->
+				<CV client:only />
 
 				<div class="mt-12 flex flex-col gap-12 md:flex-row">
 					<SocialMediaButton
@@ -44,7 +40,11 @@ import SlidingCards from '../components/sliding-cards.astro'
 			</div>
 		</div>
 
-		<span class="mx-auto mt-1 text-4xl">TIMELINE</span>
+		<div class="flex flex-col gap-8">
+			<span class="mx-auto mt-1 text-4xl">TIMELINE</span>
+			<!-- sticky on the year as well -->
+			<p class="sticky top-0 mx-auto mt-1 text-4xl">2022</p>
+		</div>
 
 		<SlidingCards />
 	</main>
