@@ -1,4 +1,4 @@
-export const CV = () => {
+export default function DownloadCVButton() {
 	return (
 		<div className="flex w-24 flex-col justify-end">
 			<a href="resume.pdf" download="Daniel Marques - Resume.pdf">

@@ -1,0 +1,40 @@
+---
+import GithubButton from './github-button.astro'
+import LinkedinButton from './linkedin-button.astro'
+import TwitterButton from './twitter-button.astro'
+import DownloadCVButton from './download-cv-button'
+---
+
+<section class="flex justify-center border-b-2 border-black bg-orange-100">
+  <div
+    class="container flex flex-col-reverse justify-center gap-12 py-96 md:flex-row md:gap-20"
+  >
+    <div class="flex flex-col gap-16">
+      <div class="flex flex-col gap-6 text-center">
+        <div class="flex flex-col gap-2">
+          <h1 class="text-8xl font-semibold leading-[112px] md:max-w-5xl">
+            DANIEL MARQUES
+          </h1>
+          <h2 class="text-2xl font-medium">
+            Software Engineer at
+            <a
+              class="ml-2 underline hover:text-gray-600"
+              href="https://www.therealreal.com/"
+              target="_blank"
+            >
+              The RealReal
+            </a>
+          </h2>
+        </div>
+
+        <div class="mx-auto flex items-center gap-4">
+          <LinkedinButton />
+          <GithubButton />
+          <TwitterButton />
+
+          <DownloadCVButton client:only />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
