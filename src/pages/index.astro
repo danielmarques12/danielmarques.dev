@@ -9,47 +9,62 @@ import { CV } from '../components/cv'
 ---
 
 <Layout title="Daniel Marques - Software Engineer">
-	<main
-		class="mx-auto flex flex-col gap-24 py-24 text-center md:max-w-6xl md:text-left"
-	>
-		<div class="flex flex-col-reverse gap-12 md:flex-row md:gap-20">
-			<div class="flex flex-col gap-16">
-				<div class="flex flex-col gap-6">
-					<div class="flex flex-col gap-2">
-						<h1 class="text-8xl font-semibold leading-[112px] md:max-w-5xl">
-							DANIEL MARQUES
-						</h1>
-						<h2 class="text-2xl font-medium">
-							Software Engineer at
-							<a
-								class="ml-2 underline hover:text-pink-300"
-								href="https://www.therealreal.com/"
-								target="_blank"
-							>
-								The RealReal
-							</a>
-						</h2>
-					</div>
+	<main class="mx-auto text-center">
+		<!-- Main Section -->
+		<section class="flex justify-center border-b-2 border-black bg-orange-100">
+			<div
+				class="container flex flex-col-reverse justify-center gap-12 py-96 md:flex-row md:gap-20"
+			>
+				<div class="flex flex-col gap-16">
+					<div class="flex flex-col gap-6 text-center">
+						<div class="flex flex-col gap-2">
+							<h1 class="text-8xl font-semibold leading-[112px] md:max-w-5xl">
+								DANIEL MARQUES
+							</h1>
+							<h2 class="text-2xl font-medium">
+								Software Engineer at
+								<a
+									class="ml-2 underline hover:text-gray-600"
+									href="https://www.therealreal.com/"
+									target="_blank"
+								>
+									The RealReal
+								</a>
+							</h2>
+						</div>
 
-					<div class="flex items-center gap-4">
-						<LinkedinButton />
-						<TwitterButton />
-						<GithubButton />
+						<div class="mx-auto flex items-center gap-4">
+							<LinkedinButton />
+							<GithubButton />
+							<TwitterButton />
 
-						<CV client:only />
+							<CV client:only />
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 
-		<div class="flex flex-col gap-8">
-			<span class="mx-auto mt-1 text-4xl">TIMELINE</span>
-			<!-- sticky on the year as well -->
-			<p class="sticky top-0 mx-auto mt-1 text-4xl">2022</p>
-		</div>
+		<!-- Carrer Section -->
+		<section class="">
+			<div class="flex flex-col gap-8 py-20">
+				<span class="mx-auto mt-1 text-4xl">CARRER</span>
+				<!-- sticky on the year as well -->
+				<!-- <p class="sticky top-0 mx-auto mt-1 text-4xl">2022</p> -->
+			</div>
 
-		<SlidingCards />
+			<SlidingCards />
+		</section>
 
-		<CalCom client:only />
+		<!-- Open Source contributions Section -->
+		<!-- <section></section> -->
+
+		<!-- Tech Stack Section -->
+		<!-- <section></section> -->
+
+		<!-- Book a call Section -->
+		<section>
+			<CalCom client:only />
+		</section>
 	</main>
 </Layout>
