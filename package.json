@@ -1,15 +1,27 @@
 {
-  "name": "danielmarques.dev",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "astro": "^2.0.18"
-  }
+	"name": "danielmarques.dev",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"astro": "astro"
+	},
+	"dependencies": {
+		"@astrojs/react": "^2.2.1",
+		"@astrojs/tailwind": "^3.1.2",
+		"@calcom/embed-react": "^1.1.1",
+		"@types/react": "^18.0.21",
+		"@types/react-dom": "^18.0.6",
+		"astro": "^2.4.2",
+		"astro-seo": "^0.7.2",
+		"prettier": "^2.8.8",
+		"prettier-plugin-astro": "^0.8.0",
+		"prettier-plugin-tailwindcss": "^0.2.8",
+		"react": "^18.0.0",
+		"react-dom": "^18.0.0",
+		"tailwindcss": "^3.0.24"
+	}
 }
