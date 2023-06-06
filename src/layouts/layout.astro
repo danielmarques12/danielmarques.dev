@@ -1,4 +1,6 @@
 ---
+import { SEO } from 'astro-seo'
+
 export interface Props {
 	title: string
 }
@@ -14,21 +16,50 @@ const { title } = Astro.props
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+
+		<SEO
+			title="danielmarques.dev"
+			description="Daniel Marques - Software Engineer - React, Next.js, Javascript, Typescript"
+			openGraph={{
+				basic: {
+					title: 'Daniel Marques - Software Engineer',
+					type: 'A type.',
+					image: 'https://avatars.githubusercontent.com/u/32924232?v=4',
+					url: 'https://danielmarques.dev'
+				}
+			}}
+			twitter={{
+				creator: '@danielm_dev'
+			}}
+			extend={{
+				// extending the default link tags
+				link: [{ rel: 'icon', href: '/favicon.ico' }],
+				// extending the default meta tags
+				meta: [
+					{
+						name: 'twitter:image',
+						content: 'https://avatars.githubusercontent.com/u/32924232?v=4'
+					},
+					{ name: 'twitter:title', content: 'Daniel Marques' },
+					{ name: 'twitter:description', content: 'Software Engineer' }
+				]
+			}}
+		/>
 	</head>
 	<body>
 		<slot />
+		<style is:global>
+			body {
+				font-family: 'oddval';
+			}
+
+			@font-face {
+				font-family: 'oddval';
+				src: url('/fonts/oddval.woff') format('woff');
+				font-weight: normal;
+				font-style: normal;
+				font-display: swap;
+			}
+		</style>
 	</body>
 </html>
-<style is:global>
-	body {
-		font-family: 'oddval';
-	}
-
-	@font-face {
-		font-family: 'oddval';
-		src: url('/fonts/oddval.woff') format('woff');
-		font-weight: normal;
-		font-style: normal;
-		font-display: swap;
-	}
-</style>
