@@ -9,7 +9,7 @@ const { title } = Astro.props
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="snap-y snap-mandatory">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -49,6 +49,21 @@ const { title } = Astro.props
 	<body>
 		<slot />
 		<style is:global>
+			*::-webkit-scrollbar {
+				width: 12px;
+			}
+
+			*::-webkit-scrollbar-track {
+				background: #272522;
+			}
+
+			*::-webkit-scrollbar-thumb {
+				background-color: #fbcfe8;
+				border-radius: 100px;
+				border: 2px solid #000;
+				background-clip: padding-box;
+			}
+
 			body {
 				font-family: 'oddval';
 			}

@@ -2,7 +2,7 @@ import Cal from '@calcom/embed-react'
 
 export default function CalCom() {
 	return (
-		<section>
+		<section className="snap-center">
 			<div className="mb-16 mt-16 flex flex-col items-center gap-6 md:mb-24 md:mt-24">
 				<p className="text-2xl">Let's chat. Book a call!</p>
 				<Cal
