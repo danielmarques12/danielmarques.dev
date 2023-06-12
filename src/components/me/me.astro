@@ -3,10 +3,11 @@ import GithubButton from './github-button.astro'
 import LinkedinButton from './linkedin-button.astro'
 import TwitterButton from './twitter-button.astro'
 import DownloadCVButton from './download-cv-button'
+import ScrollingText from './scrolling-text.astro'
 ---
 
 <section
-  class="flex snap-start justify-center border-b-2 border-black bg-orange-100"
+  class="flex h-screen flex-col items-center justify-center bg-orange-100"
 >
   <div
     class="container flex h-screen flex-col-reverse items-center justify-center gap-12 md:flex-row md:gap-20"
@@ -15,7 +16,7 @@ import DownloadCVButton from './download-cv-button'
       <div class="flex flex-col gap-6 text-center">
         <div class="flex flex-col gap-4">
           <h1
-            class="flex flex-col text-3xl font-semibold md:max-w-5xl md:flex-row md:gap-5 md:text-8xl md:leading-[112px]"
+            class="flex flex-col text-3xl font-semibold md:flex-row md:gap-5 md:text-8xl md:leading-[112px]"
           >
             <span>DANIEL MARQUES</span>
           </h1>
@@ -44,4 +45,6 @@ import DownloadCVButton from './download-cv-button'
       </div>
     </div>
   </div>
+
+  <ScrollingText />
 </section>

@@ -2,13 +2,18 @@
 import Layout from '../layouts/layout.astro'
 import Me from '../components/me/me.astro'
 import Carrer from '../components/carrer.astro'
+import CarrerTRR from '../components/carrer-trr.astro'
+import CarrerTOK from '../components/carrer-tok.astro'
 import BookCall from '../components/book-call'
 ---
 
 <Layout title="Daniel Marques - Software Engineer">
 	<main class="mx-auto text-center">
 		<Me />
-		<Carrer />
+
+		<!-- <Carrer /> -->
+		<CarrerTRR />
+		<CarrerTOK />
 		<BookCall client:only />
 
 		<!-- <OpenSource /> -->

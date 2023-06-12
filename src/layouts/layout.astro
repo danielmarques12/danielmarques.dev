@@ -9,7 +9,7 @@ const { title } = Astro.props
 ---
 
 <!DOCTYPE html>
-<html lang="en" class="snap-y snap-mandatory">
+<html lang="en" class="">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -49,6 +49,10 @@ const { title } = Astro.props
 	<body>
 		<slot />
 		<style is:global>
+			* {
+				overflow-x: hidden;
+			}
+
 			*::-webkit-scrollbar {
 				width: 12px;
 			}
@@ -66,6 +70,50 @@ const { title } = Astro.props
 
 			body {
 				font-family: 'oddval';
+			}
+
+			.scrolling-text {
+				/* animation properties */
+				-moz-transform: translateX(25%);
+				-webkit-transform: translateX(25%);
+				transform: translateX(25%);
+
+				-moz-animation: scrolling-text-animation 7.5s infinite linear;
+				-webkit-animation: scrolling-text-animation 7.5s infinite linear;
+				animation: scrolling-text-animation 7.5s infinite linear;
+			}
+
+			/* for Firefox */
+			@-moz-keyframes my-animation {
+				from {
+					-moz-transform: translateX(0%);
+				}
+				to {
+					-moz-transform: translateX(25%);
+				}
+			}
+
+			/* for Chrome */
+			@-webkit-keyframes scrolling-text-animation {
+				from {
+					-webkit-transform: translateX(25%);
+				}
+				to {
+					-webkit-transform: translateX(0%);
+				}
+			}
+
+			@keyframes scrolling-text-animation {
+				from {
+					-moz-transform: translateX(25%);
+					-webkit-transform: translateX(25%);
+					transform: translateX(25%);
+				}
+				to {
+					-moz-transform: translateX(0%);
+					-webkit-transform: translateX(0%);
+					transform: translateX(0%);
+				}
 			}
 
 			@font-face {
