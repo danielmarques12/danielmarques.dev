@@ -1,17 +1,20 @@
 ---
 import Layout from '../layouts/layout.astro'
 import Me from '../components/me/me.astro'
-// import Carrer from '../components/carrer.astro'
+import AboutMe from '../components/about-me.astro'
 import BookCall from '../components/book-call'
 ---
 
 <Layout title="Daniel Marques - Software Engineer">
-	<main class="mx-auto text-center">
+	<main
+		class="mx-auto h-screen snap-y snap-mandatory overflow-scroll overflow-x-hidden text-center"
+	>
 		<Me />
-		<!-- <Carrer /> -->
+
+		<AboutMe />
+
 		<BookCall client:only />
 
 		<!-- <OpenSource /> -->
-		<!-- <TechStack /> -->
 	</main>
 </Layout>

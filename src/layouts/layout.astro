@@ -9,14 +9,40 @@ const { title } = Astro.props
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<style>
+			* {
+				overflow-x: hidden;
+			}
 
+			/* Firefox */
+			* {
+				scrollbar-width: 12px;
+				scrollbar-color: #fbcfe8 #272522;
+			}
+
+			/* Chrome, Edge, and Safari */
+			*::-webkit-scrollbar {
+				width: 12px;
+			}
+
+			*::-webkit-scrollbar-track {
+				background: #272522;
+			}
+
+			*::-webkit-scrollbar-thumb {
+				background-color: #fbcfe8;
+				border-radius: 100px;
+				border: 2px solid #000;
+				background-clip: padding-box;
+			}
+		</style>
 		<SEO
 			title="danielmarques.dev"
 			description="Daniel Marques - Software Engineer - React, Next.js, Javascript, Typescript"
@@ -51,6 +77,45 @@ const { title } = Astro.props
 		<style is:global>
 			body {
 				font-family: 'oddval';
+			}
+
+			.scrolling-text {
+				animation: scrolling-text-animation 10s linear infinite;
+				-moz-animation: scrolling-text-animation 10s linear infinite;
+				-webkit-animation: scrolling-text-animation 10s linear infinite;
+			}
+
+			/* for Firefox */
+			@-moz-keyframes scrolling-text-animation {
+				from {
+					-moz-transform: translateX(0%);
+				}
+				to {
+					-moz-transform: translateX(-20%);
+				}
+			}
+
+			/* for Chrome */
+			@-webkit-keyframes scrolling-text-animation {
+				from {
+					-webkit-transform: translateX(0%);
+				}
+				to {
+					-webkit-transform: translateX(-20%);
+				}
+			}
+
+			@keyframes scrolling-text-animation {
+				from {
+					-moz-transform: translateX(0%);
+					-webkit-transform: translateX(0%);
+					transform: translateX(0%);
+				}
+				to {
+					-moz-transform: translateX(-20%);
+					-webkit-transform: translateX(-20%);
+					transform: translateX(-20%);
+				}
 			}
 
 			@font-face {
