@@ -21,6 +21,13 @@ const { title } = Astro.props
 				overflow-x: hidden;
 			}
 
+			/* Firefox */
+			* {
+				scrollbar-width: 12px;
+				scrollbar-color: #fbcfe8 #272522;
+			}
+
+			/* Chrome, Edge, and Safari */
 			*::-webkit-scrollbar {
 				width: 12px;
 			}
@@ -73,14 +80,9 @@ const { title } = Astro.props
 			}
 
 			.scrolling-text {
-				/* animation properties */
-				-moz-transform: translateX(25%);
-				-webkit-transform: translateX(25%);
-				transform: translateX(25%);
-
-				-moz-animation: scrolling-text-animation 7.5s infinite linear;
-				-webkit-animation: scrolling-text-animation 7.5s infinite linear;
-				animation: scrolling-text-animation 7.5s infinite linear;
+				animation: scrolling-text-animation 10s linear infinite;
+				-moz-animation: scrolling-text-animation 10s linear infinite;
+				-webkit-animation: scrolling-text-animation 10s linear infinite;
 			}
 
 			/* for Firefox */
@@ -89,30 +91,30 @@ const { title } = Astro.props
 					-moz-transform: translateX(0%);
 				}
 				to {
-					-moz-transform: translateX(25%);
+					-moz-transform: translateX(-20%);
 				}
 			}
 
 			/* for Chrome */
 			@-webkit-keyframes scrolling-text-animation {
 				from {
-					-webkit-transform: translateX(25%);
+					-webkit-transform: translateX(0%);
 				}
 				to {
-					-webkit-transform: translateX(0%);
+					-webkit-transform: translateX(-20%);
 				}
 			}
 
 			@keyframes scrolling-text-animation {
 				from {
-					-moz-transform: translateX(25%);
-					-webkit-transform: translateX(25%);
-					transform: translateX(25%);
-				}
-				to {
 					-moz-transform: translateX(0%);
 					-webkit-transform: translateX(0%);
 					transform: translateX(0%);
+				}
+				to {
+					-moz-transform: translateX(-20%);
+					-webkit-transform: translateX(-20%);
+					transform: translateX(-20%);
 				}
 			}
 
