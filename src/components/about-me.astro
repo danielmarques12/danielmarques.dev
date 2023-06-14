@@ -1,13 +1,13 @@
 ---
-import ScrollingText from './me/scrolling-text.astro'
+import AboutMeParagraph from './about-me-paragraph.astro'
 ---
 
 <section
   aria-label="about me"
-  class="flex snap-start flex-col items-center justify-center border-b-2 border-black bg-white md:h-screen"
+  class="flex snap-start flex-col items-center justify-center bg-white md:h-screen"
 >
   <div
-    class="flex flex-col items-center justify-center gap-4 p-8 md:h-screen md:items-start md:gap-6 md:py-0 md:px-8"
+    class="flex flex-col items-center justify-center gap-4 p-8 md:h-screen md:items-start md:gap-6 md:px-8 md:py-0"
   >
     <div
       class="mb-2 rounded-3xl border-[3px] border-b-8 border-r-4 border-black bg-white px-12 py-4"
@@ -22,59 +22,41 @@ import ScrollingText from './me/scrolling-text.astro'
       <img class="hidden md:block" src="brazil.svg" alt="brazil flag" />
     </p>
 
-    <p
-      class="text-md rounded-md bg-orange-100 px-3 py-2 text-[#605574] md:text-xl"
-    >
-      I do mostly web dev related stuff.
-    </p>
+    <AboutMeParagraph>I do mostly web dev related stuff.</AboutMeParagraph>
 
-    <p
-      class="text-md rounded-md bg-orange-100 px-3 py-2 text-[#605574] md:text-xl"
-    >
+    <AboutMeParagraph>
       I'm usually working with frontend and backend, and sometimes I do some DB
       things as well.
-    </p>
+    </AboutMeParagraph>
 
-    <p
-      class="text-md rounded-md bg-orange-100 px-3 py-2 text-[#605574] md:text-xl"
-    >
+    <AboutMeParagraph>
       Recently, I have been captivated by the world of UI/UX design...
-    </p>
+    </AboutMeParagraph>
 
-    <p
-      class="text-md rounded-md bg-orange-100 px-3 py-2 text-[#605574] md:text-xl"
-    >
+    <AboutMeParagraph>
       ... and have been delving deeper into the subject.
-    </p>
+    </AboutMeParagraph>
 
-    <p
-      class="text-md rounded-md bg-orange-100 px-3 py-2 text-[#605574] md:text-xl"
-    >
-      I instantly became a fan of the Neo Brutalism design when I first
-      came across it on ...
-    </p>
+    <AboutMeParagraph>
+      I instantly became a fan of the Neo Brutalism design when I first came
+      across it on ...
+    </AboutMeParagraph>
 
-    <p
-      class="text-md rounded-md bg-orange-100 px-3 py-2 text-[#605574] md:text-xl"
-    >
+    <AboutMeParagraph>
       ... websites like <a
-        class="hover:text-pink-500 underline"
+        class="underline hover:text-pink-500"
         href="https://www.figma.com"
         target="_blank">Figma.com</a
-      > and <a class="hover:text-pink-500 underline" href="https://prismic.io" target="_blank"
-        >Prismic.io</a
+      > and <a
+        class="underline hover:text-pink-500"
+        href="https://prismic.io"
+        target="_blank">Prismic.io</a
       >.
-    </p>
+    </AboutMeParagraph>
 
-    <p
-      class="text-md rounded-md bg-orange-100 px-3 py-2 text-[#605574] md:text-xl"
-    >
+    <AboutMeParagraph>
       I'm very passionate about software development and I'd love to chat with
       you about it!
-    </p>
-  </div>
-
-  <div class="hidden md:block">
-    <ScrollingText />
+    </AboutMeParagraph>
   </div>
 </section>
