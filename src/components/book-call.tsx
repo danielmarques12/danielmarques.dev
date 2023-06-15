@@ -2,7 +2,7 @@ import Cal from '@calcom/embed-react'
 
 export default function CalCom() {
 	return (
-		<section
+		<section id='book-call'
 			aria-label="book a call with me on cal.com"
 			className="flex snap-start items-center justify-center md:h-screen"
 		>
